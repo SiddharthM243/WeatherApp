@@ -5,7 +5,7 @@ import { Link, useMatch, useResolvedPath } from "react-router-dom"
 
 
 
-export default function Nav() {
+ function Nav() {
   return (
     <div>
     <nav className="nav">
@@ -15,7 +15,7 @@ export default function Nav() {
       </div>
 
       <ul>
-        <Link id="home" to="/" >Home</Link>
+        <Link to="/" >Home</Link>
         <CustomLink to="/GetWeather">Get Weather</CustomLink>
         <CustomLink to="/TemperatureConverter" >Temperature Converter</CustomLink>
       </ul>
@@ -23,6 +23,7 @@ export default function Nav() {
   </div>
   )
 }
+
 
 function CustomLink({ to, children, ...props }) {
   const Path = useResolvedPath(to)
@@ -37,3 +38,5 @@ function CustomLink({ to, children, ...props }) {
 
   )
 }
+
+export default Nav;

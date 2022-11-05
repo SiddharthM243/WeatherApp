@@ -34,6 +34,8 @@ function TemperatureConverter() {
     let defaultTempF = "fahrenheit"
 
     const convert = () => {
+        
+        //initialising values
 
         var celsius = document.getElementById("celsius").value;
         celsius = parseFloat(celsius);
@@ -59,6 +61,8 @@ function TemperatureConverter() {
 
         conversionCelsius = ((fahrenheit - 32) * 5 / 9);
         document.getElementById("celsius").value = (conversionCelsius).toFixed(2);
+        
+        //Final Output
 
         document.getElementById('celsius').innerHTML = conversionCelsius;
         document.getElementById('fahrenheit').innerHTML = conversionFahrenheit;

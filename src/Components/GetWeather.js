@@ -21,8 +21,8 @@ function GetWeather() {
                 .then(res => (res.json()))
                 .then(result => {
                     setForm(result);
-                    setweather('');
-                    console.log(result)
+                    // setweather('');
+                    // console.log(result)
 
                 });
 
@@ -78,7 +78,8 @@ function GetWeather() {
                                 id="inputVal"
                                 
                             />
-                            <div id="error"></div>
+                            <div id="error"></div>     <br/>
+                            <div id="error"><b><c>{form.message}</c></b></div>
                             <div>
                                 {(typeof form.main != "undefined") ? (
                                     <div className="location">
