@@ -27,7 +27,7 @@ function GetWeather() {
         }
         
         var error = document.getElementById("error")
-        if(!(document.getElementById("inputVal").value))
+        if(!(document.getElementById("inputVal").value)     )
         {
             error.textContent ="Please enter the valid city"
             return
@@ -47,11 +47,6 @@ function GetWeather() {
     //     }
     //     console.log(form.city);
     // })
-
-
-
-
-
 
 
 
