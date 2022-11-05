@@ -1,6 +1,4 @@
-import { isString } from "formik";
 import React, { useState } from "react";
-import * as yup from "yup";
 import image from '../Components/Assets/dexter.png';
 
 
@@ -22,11 +20,12 @@ function GetWeather() {
                 .then(result => {
                     setForm(result);
                     // setweather('');
-                    // console.log(result)
+                    console.log(result)
 
                 });
 
         }
+        
         var error = document.getElementById("error")
         if(!(document.getElementById("inputVal").value))
         {
@@ -73,13 +72,13 @@ function GetWeather() {
                                 className="input"
                                 placeholder="Enter the city..."
                                 onChange={e => setweather(e.target.value)}
-                                value={weather}
+                                // value={weather}
                                 onKeyPress={weatherData}
                                 id="inputVal"
                                 
                             />
-                            <div id="error"></div>     <br/>
-                            <div id="error"><b><c>{form.message}</c></b></div>
+                            <div id="error"> </div>     <br/>
+                            <div id="error"><b>{form.message}</b></div>
                             <div>
                                 {(typeof form.main != "undefined") ? (
                                     <div className="location">
